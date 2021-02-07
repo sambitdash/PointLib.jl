@@ -1,15 +1,27 @@
+"Sample module to show how packages are built"
 module PointLib
 
 using LinearAlgebra
 
 export Point2D, iscollinear, ϵ
 
+"Automatically generated code for Hello"
 greet() = print("Hello World!")
 
+"""
+   Point2D
+```  
+   x: Float64 x-cordinates 
+   y: Float64 y-cordinates
+```
+"""
 struct Point2D
 	x::Float64
 	y::Float64
 end
+
+"Returns the point coincident tolerance value"
+function ϵ end
 
 let _epsilon = 1e-5
 	global ϵ() = _epsilon
@@ -26,7 +38,14 @@ end
 	
 L(pA::Point2D, pB::Point2D, pC::Point2D) =
 	max(length(pA, pB), length(pB, pC), length(pC, pA))
+
+"""
+    iscollinear
 	
+```
+    pA, pB, pC: 3 points of type Point2D to check the points are collinear.
+```	
+"""	
 function iscollinear(pA::Point2D, pB::Point2D, pC::Point2D)
     l = L(pA, pB, pC)
 	# The longest length is too small if all the points are coincident
