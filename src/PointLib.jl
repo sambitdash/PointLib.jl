@@ -5,14 +5,14 @@ using LinearAlgebra
 
 export Point2D, iscollinear, ϵ
 
-"Automatically generated code for Hello"
+"Automatically generated code for Hello World!"
 greet() = print("Hello World!")
 
 """
    Point2D
 ```  
-   x: Float64 x-cordinates 
-   y: Float64 y-cordinates
+   x: Float64 x-coordinates 
+   y: Float64 y-coordinates
 ```
 """
 struct Point2D
