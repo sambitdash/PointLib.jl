@@ -20,3 +20,4 @@ A sample application showing CI integration with GitHub Actions and Codecov.
 ## Contribution
 
 This project is for educational purposes. We do not plan to extend it any further. 
+ 
